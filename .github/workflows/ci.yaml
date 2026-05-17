@@ -1,28 +1,28 @@
 name: workflow-github-actions
 
-on: 
+on:
   push:
     branches: [main]
 
 jobs:
-  CI: 
+  CI:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-        
+        uses: actions/checkout@v4
+
       - name: Docker Login
-        uses: docker/login-action@v2.1.0
+        uses: docker/login-action@v3
         with:
-          username: ${{ secrets.SEC_USER_DOCKER}}
-          password: ${{ secrets.SEC_PASSWD_DOCKER}}
+          username: ${{ secrets.SEC_USER_DOCKER }}
+          password: ${{ secrets.SEC_PASSWD_DOCKER }}
 
       - name: Build and push docker images
-        uses: docker/build-push-action@v3.2.0
-        with :
+        uses: docker/build-push-action@v5
+        with:
           context: .
           push: true
           tags: |
-          leonardoteixeiraa/workflow-github-action:v1.0
-          leonardoteixeiraa/workflow-github-action:latest
+            leoteixeiradev/workflow-github-action:v1.0
+            leoteixeiradev/workflow-github-action:latest
