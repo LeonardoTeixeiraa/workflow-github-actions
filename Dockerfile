@@ -1,9 +1,7 @@
 FROM php:8.2-apache
 LABEL maintainer="@LeonardoTeixeiraa"
 
-RUN apt update
-RUN apt upgrade
-RUN apt install git -y
+RUN apt update; apt upgrade -y; apt install git -y
 
 WORKDIR /var/www/html
 
