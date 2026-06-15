@@ -4,7 +4,7 @@
 
 > **Projeto acadêmico focado na prática de Implantação de Servidores e CI/CD**
 
-O objetivo principal deste projeto foi desenhar e implementar um fluxo de trabalho automatizado utilizando **GitHub Actions** para criar uma imagem Docker e publicá-la automaticamente no **Docker Hub** a cada atualização no código.
+O objetivo principal deste projeto foi desenhar e implementar um fluxo de trabalho automatizado utilizando **GitHub Actions** para criar uma imagem Docker, publicá-la automaticamente no **Docker Hub** e fazer deploy automático em uma nuvem AWS-EC2 a cada push feito na branch main.
 
 ---
 
